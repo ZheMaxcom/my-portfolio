@@ -122,3 +122,73 @@ a:focus-visible {
     margin-top: 0.5rem;
   }
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid #e7e0d6;
+  border-radius: 999px;
+  background: #fffcf8;
+  box-shadow: 0 8px 20px rgba(60, 42, 20, 0.08);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: #b45309;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #b45309;
+  outline-offset: 3px;
+}
+
+html.theme-dark body {
+  color: #f5f0e8;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, #3d2a14 0%, transparent 55%),
+    linear-gradient(165deg, #1c1917 0%, #1a2420 100%);
+}
+
+html.theme-dark .card {
+  background: #292524;
+  border-color: #44403c;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+html.theme-dark .label {
+  color: #fbbf24;
+}
+
+html.theme-dark .about {
+  color: #d6d3d1;
+}
+
+html.theme-dark .skills,
+html.theme-dark .contacts {
+  border-top-color: #44403c;
+}
+
+html.theme-dark span {
+  color: #a8a29e;
+}
+
+html.theme-dark a {
+  color: #f5f0e8;
+}
+
+html.theme-dark a:hover {
+  color: #fbbf24;
+}
+
+html.theme-dark .theme-toggle {
+  background: #292524;
+  border-color: #44403c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
