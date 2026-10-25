@@ -192,3 +192,85 @@ html.theme-dark .theme-toggle {
   border-color: #44403c;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
+
+.more {
+  margin-top: 1.25rem;
+}
+
+.more-toggle {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e7e0d6;
+  border-radius: 0.85rem;
+  background: #fffcf8;
+  color: #1c1917;
+  box-shadow: 0 8px 20px rgba(60, 42, 20, 0.06);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.more-toggle:hover {
+  border-color: #b45309;
+  color: #b45309;
+}
+
+.more-toggle:focus-visible {
+  outline: 2px solid #b45309;
+  outline-offset: 3px;
+}
+
+.more-about {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.more-about.is-open {
+  grid-template-rows: 1fr;
+}
+
+.more-about__inner {
+  overflow: hidden;
+}
+
+.more-about p {
+  margin: 0.85rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #44403c;
+  opacity: 0;
+  transform: translateY(-0.35rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.more-about.is-open p {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .more-about,
+  .more-about p {
+    transition: none;
+  }
+}
+
+html.theme-dark .more-toggle {
+  background: #292524;
+  border-color: #44403c;
+  color: #f5f0e8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+html.theme-dark .more-toggle:hover {
+  border-color: #fbbf24;
+  color: #fbbf24;
+}
+
+html.theme-dark .more-about p {
+  color: #d6d3d1;
+}

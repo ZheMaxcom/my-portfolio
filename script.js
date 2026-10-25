@@ -44,3 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(next);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".more-toggle");
+  const panel = document.getElementById("more-about");
+  if (!button || !panel) return;
+
+  button.addEventListener("click", () => {
+    const open = button.getAttribute("aria-expanded") !== "true";
+
+    button.setAttribute("aria-expanded", String(open));
+    button.textContent = open ? "Сховати" : "Детальніше про мене";
+    panel.classList.toggle("is-open", open);
+    panel.setAttribute("aria-hidden", String(!open));
+  });
+});
